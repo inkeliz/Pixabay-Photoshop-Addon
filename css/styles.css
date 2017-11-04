@@ -1,0 +1,474 @@
+.hostFontColor{}
+.hostFontFamily{}
+.hostFontSize{}
+
+
+.hostFont{}
+.hostBgd{}
+.hostBgdLight{}
+.hostBgdDark{}
+.hostElt{}
+.hostBorder{}
+
+
+body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar {
+    width: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border: 1px solid #000000;
+}
+
+textarea:focus, input:focus,  button:focus, select:focus, option:focus {
+    outline: none;
+}
+
+section.window {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+main.real {
+    z-index: 5;
+}
+
+main .info {
+    width: calc(100% - 10px);
+    display: block;
+    z-index: 5;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 5px 5px 0 5px;
+}
+
+.flex-images {
+    overflow: hidden;
+    width: 100%;
+}
+
+.flex-images .item {
+    width: calc(100% - 10px);
+    min-width: calc(100% - 10px);
+    height: auto;
+    margin: 4px;
+    position: relative;
+    opacity: 0.3;
+}
+
+@media screen and (max-width: 449px) {
+    .flex-images .left, .flex-images .right {
+        width: 100%;
+        min-width: 100%;
+        float: none;
+    }
+}
+
+@media screen and (min-width: 450px) {
+    .flex-images .left, .flex-images .right {
+        width: 50%;
+        min-width: 50%;
+        float: left;
+    }
+}
+
+.flex-images .item.active {
+    opacity: 1;
+}
+
+.flex-images .item img {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    background: url("../img/backgroud/alpha.png")
+}
+
+main .header {
+    height: 40px;
+}
+
+main .header .button {
+    float: left;
+    width: 19px;
+}
+
+main .header .button {
+    padding: 10px 5px 0 5px;
+}
+
+main .header .search {
+    float: left;
+    height: 35px;
+    width: 100%;
+}
+
+main .search .configuration-trigger{
+    float: left;
+    width: 24px;
+    height: 24px;
+    margin: 10px 5px 0 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+    background-image: url("../img/icons/ic_settings_white_24dp_1x.png");
+    background-size: cover;
+    font-family: 'Encode Sans Expanded', sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+main .header .search input {
+    background: inherit;
+    font-family: 'Encode Sans Expanded', sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    border: 0;
+    width: calc(100% - 53px);
+    height: 20px;
+    color: #ffffff;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin: 10px 5px 0 5px;
+}
+
+main .header .search input:hover {
+}
+
+main .header .search input:focus {
+
+}
+
+aside {
+
+    width: 230px;
+    height: 596px;
+    display: block;
+    position: absolute;
+    left: 766px;
+    right: 0;
+    bottom: 0;
+
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    border-left: inset #2c1d20 1px;
+
+
+}
+
+
+aside.clone {
+    background: inherit;
+    z-index: 1;
+    -webkit-filter: blur(10px);
+}
+
+
+aside.real {
+    background: rgba(118, 97, 106, 0.5);
+    z-index: 5;
+}
+
+aside .non-downloadable {
+    display: none;
+    padding: 25px 55px;
+}
+
+aside .non-downloadable.active {
+    display: block;
+}
+
+main .downloadable {
+    display: block;
+    z-index: 50;
+}
+
+main .download.active {
+    bottom: 0;
+    -webkit-transition: 500ms;
+}
+
+main .download {
+    -webkit-transition: 250ms;
+    height: 190px;
+    width: calc(100% - 20px);
+    position: absolute;
+    bottom: -255px;
+    z-index: 10;
+    padding: 10px;
+}
+
+main .download .profile {
+    cursor: pointer;
+    height: 50px;
+    width: 100%;
+    font-family: 'Encode Sans Expanded', sans-serif;
+    font-size: 12px;
+    margin: 5px 5px 25px 0;
+}
+
+
+main .download .profile img {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+
+    float: left;
+}
+
+main .download .profile .text {
+    cursor: pointer;
+    float: left;
+    padding-left: 5px;
+    width: calc(100% - 55px);
+}
+
+main .download .profile .name {
+    cursor: pointer;
+    height: 15px;
+    line-height: 15px;
+    width: 100%;
+    margin: 2px 0 5px;
+
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}
+
+main .download .profile .photoby {
+    cursor: pointer;
+    height: 10px;
+    line-height: 8px;
+    float: left;
+    width: 100%;
+    font-size: 8px;
+    margin-top: 8px;
+}
+
+
+main .download .profile .interactions {
+    cursor: pointer;
+    height: 20px;
+    width: 77px;
+
+    line-height: 20px;
+
+    float: left;
+}
+
+
+main .download button {
+    cursor: pointer !important;
+
+
+    border: solid 2px rgba(14, 11, 16, 0.35);
+    height: 40px;
+    font-size: 13px;
+    width: 100%;
+    background: rgba(222, 222, 222, 0.0);
+    margin-bottom: 3px;
+}
+
+main .download button:hover {
+    border: solid 2px rgba(14, 11, 16, 0.65);
+    background: rgba(14, 11, 16, 0.75);
+}
+
+
+main .download select {
+    cursor: pointer !important;
+    float: left;
+    width: 70%;
+    padding: 0;
+    border: 0;
+    margin: 2px 0 3px 0;
+    height: 22px;
+    font-size: 13px;
+    line-height: 18px;
+    background: url("../img/icons/square.png") no-repeat right;
+    -webkit-appearance: none;
+    border-bottom: solid 1px rgba(97, 95, 95, 0.90);
+}
+
+main .download select.mini {
+    width: calc(30% - 6px);
+    margin-right: 6px;
+}
+
+main .download option {
+    color: #000000;
+}
+
+
+.configuration {
+    width: 170px;
+    padding: 10px;
+    position: absolute;
+    z-index: 101;
+    height: 210px;
+    left:5px;
+}
+
+.configuration .center {
+    text-align: center;
+    cursor: default;
+}
+
+.configuration select {
+    display: none;
+}
+
+.configuration select .active {
+    display: block;
+}
+
+.configuration .line {
+    margin-bottom: 25px;
+    display: block;
+    height: 20px;
+    padding-bottom: 5px;
+    text-transform: capitalize;
+}
+
+.configuration .block {
+    margin-bottom: 2px;
+    display: block;
+    height: 15px;
+    padding-bottom: 2px;
+    text-transform: capitalize;
+}
+
+.configuration .line .name {
+    cursor: default !important;
+    float: left;
+    width: 90px;
+    margin-right: 10px;
+    padding-top: 2px;
+    height: 18px;
+    font-size: 12px;
+    font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+.configuration .line .value input {
+    display: block;
+    float: left;
+}
+
+
+.configuration .line .value label {
+    line-height: 15px;
+    display: block;
+    margin-top: 1px;
+    float: left;
+}
+
+.configuration .line .value option {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.configuration .line .value select:hover {
+    border-bottom: solid 1px rgba(255, 255, 255, 0.8);
+}
+
+.configuration .line .value select:focus {
+    border-bottom: solid 1px rgba(255, 255, 255, 0.9);
+}
+
+.configuration .line .value {
+    float: left;
+    width: 70px;
+}
+
+.configuration .line .value .line {
+    float: none;
+    margin-bottom: 5px;
+}
+
+main .config {
+    height: 30px;
+    margin: 0 6px 0 6px;
+}
+
+main .config .option {
+    cursor: pointer;
+    float: left;
+    height: 23px;
+    width: 50%;
+    text-align: center;
+    font-family: 'Encode Sans Expanded', sans-serif;
+    font-size: 12px;
+    line-height: 12px;
+    padding-top: 5px;
+}
+
+main .config .option.active {
+    opacity: 1;
+    -webkit-transition: 300ms;
+}
+
+
+*[template], *[template-default] {
+    display: none !important;
+}
+
+
+.fixed {
+    width: 100% !important;
+    max-height: 175px !important;
+    background-size: cover !important;
+}
+
+.loading {
+    z-index: 5000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.6);
+    display: none;
+    width: 100%;
+    height: 1000px;
+    text-align: center;
+}
+
+.loading img{
+    margin-top: 200px;
+}
+
+.loading.active{
+    display: block;
+}
+
+.search-result, .configuration, .disk {
+    display: none;
+}
+
+.search-result.active, .configuration.active, .disk.active {
+    display: block;
+}

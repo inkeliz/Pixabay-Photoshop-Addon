@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <link id="hostStyle" rel="stylesheet" href="css/styles.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded:300" rel="stylesheet">
+
+    <title>PixaBay</title>
+</head>
+
+<body class="hostElt" oncontextmenu="return false;">
+
+<section class="window">
+    <main class="real">
+
+        <div class="header">
+            <div class="search">
+                <button class="configuration-trigger hostElt drkBorder"></button>
+                <form id="search">
+                    <label><input type="text" name="search" class="drkBorder"
+                                  placeholder="Search" maxlength="100"></label>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="configuration hostBgdLight drkBorder">
+            <div template=".configuration form" class="line">
+                <div class="name"></div>
+                <div class="value">
+                </div>
+            </div>
+
+            <form id="configuration"></form>
+            <div class="center">Powered by Pixabay</div>
+        </div>
+
+        <div class="info hostBgdLight">
+
+            <div class="search-result active">
+                <div template=".info .search-result .flex-images" class="item active hostBorder">
+                    <img src="img/backgroud/blank.gif" draggable="false">
+                </div>
+
+                <div template-default=".info .search-result .flex-images">
+                    <div class="left" data-h="0"></div>
+                    <div class="right" data-h="0"></div>
+                </div>
+
+                <div class="flex-images">
+
+                </div>
+            </div>
+
+            <div class="disk">
+
+                <div template=".info .disk .flex-images" class="item active hostBorder">
+                    <img src="img/backgroud/blank.gif" draggable="false">
+                </div>
+
+                <div template-default=".info .disk .flex-images">
+                    <div class="left" data-h="0"></div>
+                    <div class="right" data-h="0"></div>
+                </div>
+
+                <div class="flex-images">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="download hostBgdDark">
+
+            <div class="downloadable">
+
+                <div class="hostBgdLight">
+                    <div class="profile">
+                        <img draggable="false">
+                        <div class="text">
+                            <div class="photoby">Author</div>
+                            <div class="name"></div>
+                            <div class="interactions"></div>
+                            <div class="interactions"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <form id="download">
+                    <button type="submit" class="hostFont">Download</button>
+                    <input name="url" value="" type="hidden">
+                    <input name="id" value="" type="hidden">
+                    <select name="size" class="mini">
+                        <option value="_340">340p</option>
+                        <option value="_340">340p</option>
+                        <option value="_640">640p</option>
+                        <option value="_960">960p</option>
+                        <option value="_1280">1280p</option>
+                        <option value="_1920" selected>1920p</option>
+                        <option value="">Original</option>
+
+                    </select>
+                    <select name="mode">
+                        <option value="layer">Open as a new layer</option>
+                        <option value="clip">Open as clipping mask</option>
+                        <option value="file">Open as a new file</option>
+                    </select>
+                </form>
+
+            </div>
+
+        </div>
+
+        <div class="config">
+            <div class="option active" data-t=".info .search-result">Search</div>
+            <div class="option" data-t=".info .disk">Downloaded</div>
+        </div>
+
+        <div class="footer-border hostBgd"></div>
+    </main>
+
+    <div class="loading"><img width="150" height="150" src="img/loading.gif" draggable="false"></div>
+
+    <script src="js/libs/CSInterface.js"></script>
+
+    <script src="js/Pixa/PixaCache.js"></script>
+    <script src="js/Pixa/PixaHelper.js"></script>
+    <script src="js/Pixa/PixaAPI.js"></script>
+    <script src="js/Pixa/PixaFiles.js"></script>
+
+    <script src="js/Bay/BayTemplate.js"></script>
+    <script src="js/Bay/BayStorage.js"></script>
+    <script src="js/Bay/BaySwitch.js"></script>
+    <script src="js/Bay/BayLoading.js"></script>
+
+    <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

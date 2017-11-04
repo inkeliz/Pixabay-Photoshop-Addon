@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionManifest Version="7.0" ExtensionBundleId="com.inkeliz.PixaBay" ExtensionBundleVersion="2.0.2"
+		ExtensionBundleName="PixaBay" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ExtensionList>
+		<Extension Id="com.inkeliz.PixaBay" Version="1.0" />
+	</ExtensionList>
+	<ExecutionEnvironment>
+		<HostList>
+            <!-- Photoshop -->
+            <Host Name="PHXS" Version="[17.0.2,19.5]" />
+            <Host Name="PHSP" Version="[17.0.2,19.5]" />
+		</HostList>
+		<LocaleList>
+			<Locale Code="All" />
+		</LocaleList>
+		<RequiredRuntimeList>
+			<RequiredRuntime Name="CSXS" Version="7.0" />
+		</RequiredRuntimeList>
+	</ExecutionEnvironment>
+	<DispatchInfoList>
+		<Extension Id="com.inkeliz.PixaBay">
+			<DispatchInfo >
+				<Resources>
+				<MainPath>./index.html</MainPath>
+				<ScriptPath>./jsx/hostscript.jsx</ScriptPath>
+				</Resources>
+				<CEFCommandLine>
+					<Parameter>--enable-nodejs</Parameter>
+					<Parameter>--mixed-context</Parameter>
+				</CEFCommandLine>
+				<Lifecycle>
+					<AutoVisible>true</AutoVisible>
+				</Lifecycle>
+				<CEFCommandLine>
+					<Parameter>--allow-file-access</Parameter>
+					<Parameter>--allow-file-access-from-files</Parameter>
+				</CEFCommandLine>
+				<UI>
+					<Type>Panel</Type>
+					<Menu>Pixabay</Menu>
+					<Geometry>
+						<Size>
+							<Height>600</Height>
+							<Width>300</Width>
+						</Size>
+                        <MinSize>
+                            <Height>600</Height>
+							<Width>300</Width>
+                        </MinSize>
+                        <MaxSize>
+                            <Height>900</Height>
+							<Width>600</Width>
+                        </MaxSize>
+					</Geometry>
+					<Icons>
+						<Icon Type="Normal">./icons/iconNormal.png</Icon>
+						<Icon Type="RollOver">./icons/iconRollover.png</Icon>
+						<Icon Type="Disabled">./icons/iconDisabled.png</Icon>
+						<Icon Type="DarkNormal">./icons/iconDarkNormal.png</Icon>
+						<Icon Type="DarkRollOver">./icons/iconDarkRollover.png</Icon>
+					</Icons>					
+				</UI>
+			</DispatchInfo>
+		</Extension>
+	</DispatchInfoList>
+</ExtensionManifest>
